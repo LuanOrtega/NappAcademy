@@ -1,4 +1,4 @@
-from MyHolidays.myholidays.holidays import MyCalendar
+from myholidays.Holidays import MyCalendar
 from datetime import date
 import pytest
 

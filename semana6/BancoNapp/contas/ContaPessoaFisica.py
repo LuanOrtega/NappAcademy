@@ -14,6 +14,7 @@ class ContaPessoaFisica(Conta):
         Construtor da classe PessoaFísica.
         Extrai do dicionário kwargs a profissao do correntista.
         """
+        self.limite = 500
         self.profissao = kwargs.get('profissao', '')
         super(ContaPessoaFisica, self).__init__(**kwargs)
 

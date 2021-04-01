@@ -2,12 +2,14 @@ from datetime import date
 
 
 class Colaborador:
-    def __init__(self, nome, dia=None, mes=None, ano=None):
+    def __init__(self, nome, responsavel, dia=None, mes=None, ano=None):
         self._nome = nome
         try:
             self._aniversario = date(ano, mes, dia)
         except TypeError:
             raise TypeError('Informe dia, mês e ano')
+        self._responsavel = responsavel
+
 
     @property
     def nome(self):
@@ -27,6 +29,17 @@ class Colaborador:
             if self._aniversario.month == hoje.month:
                 return True
         return False
+
+    @property
+    def responsavel(self):
+        return self._responsavel
+    
+    @responsavel.setter
+    def responsavel(self, value):
+        if self._responsavel == True:
+            value = True
+        else:
+            value = False
 
     def __str__(self):
         return self._nome

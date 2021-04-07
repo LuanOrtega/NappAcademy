@@ -48,7 +48,7 @@ class Contexto():
 
     def _dados_credenciais_validos(self):
         """
-        Método interno, verifica se as credendiais informadas são suficientes
+        Método interno, verifica se as credenciais informadas são suficientes
         para extrair os dados.
         Retorna
             True, caso credenciais sejam suficientes.
